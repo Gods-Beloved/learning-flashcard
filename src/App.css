@@ -13,6 +13,16 @@ body {
   gap: 20px;
 }
 
+header {
+  margin-top: 10px;
+  margin-bottom: 40px;
+}
+
+.category-container {
+  display: flex;
+  justify-content: center;
+}
+
 .flashcards div {
   border: 1px solid #e7e7e7;
   background-color: #f7f7f7;
