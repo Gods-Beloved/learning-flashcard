@@ -13,16 +13,18 @@ function CardItem({ question, id, onItemClick }) {
   }
 
   return (
-    <div
-      className={singleQuestion.id === id ? "selected" : ""}
-      onClick={handleOnItemPressed}
-    >
-      <p>
-        {singleQuestion.id === id
-          ? singleQuestion.answer
-          : singleQuestion.question}
-      </p>
-    </div>
+    <>
+      <div
+        className={singleQuestion.id === id ? "selected" : ""}
+        onClick={handleOnItemPressed}
+      >
+        <p>
+          {singleQuestion.id === id
+            ? singleQuestion.answer
+            : singleQuestion.question}
+        </p>
+      </div>
+    </>
   );
 }
 

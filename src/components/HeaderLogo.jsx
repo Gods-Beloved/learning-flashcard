@@ -1,0 +1,22 @@
+import ProfilePicture from "../assets/logo.png";
+
+function HeaderLogo() {
+  return (
+    <header className="logo-container">
+      <img
+        src={ProfilePicture}
+        style={{
+          cursor: "pointer",
+          height: "100px",
+          width: "250px",
+          objectFit: "contain",
+          marginLeft: "10px",
+          transition: "all 0.3s ease",
+        }}
+        alt="logo"
+      />
+    </header>
+  );
+}
+
+export default HeaderLogo;

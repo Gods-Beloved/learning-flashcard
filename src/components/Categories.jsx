@@ -2,35 +2,45 @@
 import { ToggleButton, ToggleButtonGroup } from "@mui/material";
 import { useState } from "react";
 
-function Categories({ categories }) {
+function Categories({ categories, onSetMainCategory }) {
   return (
-    <header>
+    <div>
       <div className="category-container">
-        <ToggleMultipleCategories categories={categories} />
+        <ToggleMultipleCategories
+          categories={categories}
+          onSetMainCategory={onSetMainCategory}
+        />
       </div>
-    </header>
+    </div>
   );
 }
 
-function ToggleMultipleCategories({ categories }) {
+function ToggleMultipleCategories({ categories, onSetMainCategory }) {
   const [category, setCategory] = useState([...categories]);
 
   const handleCategory = (event, newCategory) => {
     console.log(newCategory);
     setCategory(newCategory);
+    onSetMainCategory(newCategory);
   };
 
   return (
-    <ToggleButtonGroup value={category} onChange={handleCategory}>
-      <ToggleButton value="world">World</ToggleButton>
-      <ToggleButton value="tech">Technology</ToggleButton>
-      <ToggleButton value="sci">Science</ToggleButton>
-      <ToggleButton value="art">Arts</ToggleButton>
+    <ToggleButtonGroup
+      value={category}
+      onChange={handleCategory}
+      color="secondary"
+    >
+      <ToggleButton value="geo">Geography</ToggleButton>
       <ToggleButton value="sports">Sports</ToggleButton>
-      <ToggleButton value="health">Health</ToggleButton>
+      <ToggleButton value="arts">Arts</ToggleButton>
+      <ToggleButton value="wild">Wildlife</ToggleButton>
+      <ToggleButton value="music">Music</ToggleButton>
+      <ToggleButton value="people">People</ToggleButton>
+      <ToggleButton value="astro">Astronomy</ToggleButton>
+
+      {/* <ToggleButton value="tech">Technology</ToggleButton> */}
+
       {/* <ToggleButton value="TRAVEL">Travel</ToggleButton> */}
-      <ToggleButton value="ent">Entertainment</ToggleButton>
-      {/* <ToggleButton value="NEWS">News</ToggleButton> */}
       {/* <ToggleButton value="BUSINESS">Business</ToggleButton> */}
       {/* <ToggleButton value="POLITICS">Politics</ToggleButton> */}
       {/* <ToggleButton value="EDUCATION">Education</ToggleButton> */}

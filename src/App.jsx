@@ -9,11 +9,12 @@ import "@fontsource/roboto/300.css";
 import "@fontsource/roboto/400.css";
 import "@fontsource/roboto/500.css";
 import "@fontsource/roboto/700.css";
+import HeaderLogo from "./components/HeaderLogo";
 
 function App() {
   const cardQuestions = questions;
 
-  const [mainCategory, setMainCategory] = useState(["world"]);
+  const [mainCategory, setMainCategory] = useState(["geo"]);
 
   function handleSetCategory(questionCategory) {
     setMainCategory(questionCategory);
@@ -21,9 +22,10 @@ function App() {
 
   return (
     <div>
+      <HeaderLogo />
       <Categories
         categories={mainCategory}
-        setMainCategory={handleSetCategory}
+        onSetMainCategory={handleSetCategory}
       />
       <FlashCards questionList={cardQuestions} categories={mainCategory} />
     </div>
@@ -44,7 +46,7 @@ function FlashCards({ questionList, categories }) {
   }
 
   return (
-    <main className="flashcards">
+    <div className="flashcards">
       {filteredQuestions.map((question) => (
         <CardItem
           question={question}
@@ -53,7 +55,7 @@ function FlashCards({ questionList, categories }) {
           onItemClick={handleOnItemClick}
         />
       ))}
-    </main>
+    </div>
   );
 }
 
