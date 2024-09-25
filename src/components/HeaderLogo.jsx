@@ -1,10 +1,10 @@
-import logo from "../logo.png";
+// import logo from "./";
 
 function HeaderLogo() {
   return (
     <header className="logo-container">
       <img
-        src={logo}
+        src="./logo.png"
         style={{
           cursor: "pointer",
           height: "100px",
