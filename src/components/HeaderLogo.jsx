@@ -1,10 +1,10 @@
-import ProfilePicture from "../assets/logo.png";
+import logo from "../logo.png";
 
 function HeaderLogo() {
   return (
     <header className="logo-container">
       <img
-        src={ProfilePicture}
+        src={logo}
         style={{
           cursor: "pointer",
           height: "100px",
