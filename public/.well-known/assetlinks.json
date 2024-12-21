@@ -1,0 +1,12 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.fedhaway.wealthapplication",
+      "sha256_cert_fingerprints": [
+        "54:D5:6A:B5:F9:DE:1C:7C:B4:CE:E5:AB:71:ED:CD:2F:53:88:16:42:48:69:FE:4E:6F:C2:7C:B1:E9:80:38:4F"
+      ]
+    }
+  }
+]
